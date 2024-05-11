@@ -7,7 +7,7 @@ import logo from '/logo.png'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from "../../provider/AuthProvider";
-import { MdDarkMode, MdLightMode } from "react-icons/md";
+import { MdDarkMode, MdLightMode, MdOutlineLogout } from "react-icons/md";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false)
@@ -110,12 +110,14 @@ const Navbar = () => {
                     <div>
                         {
                             user ?
-                                <div className="dropdown dropdown-hover dropdown-bottom dropdown-end">
-                                    <div tabIndex={0} role="button"><img src={user.photoURL} alt="" className="w-12 h-12 object-cover object-top rounded-full " /></div>
-                                    <ul tabIndex={0} className={`dropdown-content z-[1] menu p-2 shadow-xl ${darkMode ? "bg-gray-800 border border-gray-700" : "bg-slate-100"} rounded-md shadow-xl w-52`}>
-                                        <li><p className="text-base font-bold">{user.displayName}</p></li>
-                                        <li><button onClick={handleSignOut} className="btn btn-error">Sign Out</button></li>
-                                    </ul>
+                                <div className="flex items-center gap-2">
+                                    <div className={`flex gap-2 items-center ml-2 ${darkMode ? 'bg-gray-600' : 'bg-slate-300'} py-1 pl-2 lg:px-2 rounded-full`}>
+                                        <h2 className="font-bold text-base 2xl:text-lg">{user.displayName}</h2>
+                                        <img src={user.photoURL} alt="" className="w-12 h-12 object-cover object-top rounded-full " />
+                                        <div>
+                                            <button className={`btn btn-active  hidden btn-circle text-2xl font-extrabold lg:flex ${darkMode ? 'bg-gray-300 text-black' : 'bg-slate-700 text-white'}`} onClick={handleSignOut}><MdOutlineLogout /></button>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 :
