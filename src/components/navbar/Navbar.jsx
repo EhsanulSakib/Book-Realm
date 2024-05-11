@@ -85,7 +85,7 @@ const Navbar = () => {
             </div>
 
 
-            <div className="flex flex-col gap-4 lg:flex-row items-center">
+            <div className="flex flex-col lg:gap-8 lg:flex-row items-center">
 
 
                 <div>
@@ -111,9 +111,9 @@ const Navbar = () => {
                         {
                             user ?
                                 <div className="dropdown dropdown-hover dropdown-bottom dropdown-end">
-                                    <div tabIndex={0} role="button"><img src={user.photoURL} alt="" className="w-10 h-10 object-cover object-top rounded-full " /></div>
-                                    <ul tabIndex={0} className={`dropdown-content z-[1] menu p-2 shadow-xl ${darkMode ? "bg-gray-800" : "bg-slate-100"} border border-gray-300 w-52`}>
-                                        <li><p>{user.displayName}</p></li>
+                                    <div tabIndex={0} role="button"><img src={user.photoURL} alt="" className="w-12 h-12 object-cover object-top rounded-full " /></div>
+                                    <ul tabIndex={0} className={`dropdown-content z-[1] menu p-2 shadow-xl ${darkMode ? "bg-gray-800 border border-gray-700" : "bg-slate-100"} rounded-md shadow-xl w-52`}>
+                                        <li><p className="text-base font-bold">{user.displayName}</p></li>
                                         <li><button onClick={handleSignOut} className="btn btn-error">Sign Out</button></li>
                                     </ul>
                                 </div>

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-// import { ToastContainer } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import { Outlet } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import Navbar from "../components/navbar/Navbar";
@@ -11,7 +11,7 @@ const Root = () => {
             <div className={`px-1 max-w-[3080px] m-auto min-h-screen`} >
                 <Navbar></Navbar>
                 <Outlet></Outlet>
-                {/* <ToastContainer></ToastContainer> */}
+                <ToastContainer></ToastContainer>
                 {/* <Footer></Footer> */}
             </div >
         </div>
