@@ -12,7 +12,7 @@ const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true)
     const [books, setBooks] = useState([])
-    const GoogleProvider = new GoogleAuthProvider();
+    const GoogleProvider = new GoogleAuthProvider()
     const GitHubProvider = new GithubAuthProvider()
 
     const createUser = (email, password) => {

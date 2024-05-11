@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="1440" height="560" preserveAspectRatio="none" viewBox="0 0 1440 560"><g mask="url(&quot;#SvgjsMask1490&quot;)" fill="none"><rect width="1440" height="560" x="0" y="0" fill="url(&quot;#SvgjsLinearGradient1491&quot;)"></rect><path d="M243.24769546942696 113.47152951514761L246.09849248207402-49.850521956489445 82.77644101043697-52.70131896913651 79.9256439977899 110.62073250250054z" fill="rgba(28, 83, 142, 0.4)" class="triangle-float2"></path><path d="M694.1846440004477 176.83827457549484L749.9118445479925 94.21930215922313 667.2928721317207 38.49210161167838 611.565671584176 121.11107402795008z" fill="rgba(28, 83, 142, 0.4)" class="triangle-float2"></path><path d="M816.217523054756 324.6314601070494L931.2591594133744 336.72282332023394 943.3505226265589 221.68118696161565 828.3088862679406 209.5898237484311z" fill="rgba(28, 83, 142, 0.4)" class="triangle-float1"></path><path d="M1275.7293858462087 496.00608206967325L1230.5880135468424 389.37725191408015 1168.2712825172994 469.13903034097046z" fill="rgba(28, 83, 142, 0.4)" class="triangle-float2"></path><path d="M409.9246358616941 81.53030154793021L445.33666996444026 184.37431618975225 581.8966748758003 79.8342577147221z" fill="rgba(28, 83, 142, 0.4)" class="triangle-float3"></path><path d="M1104.0645824157857 159.75836106875374L1006.2356928377097 83.32605578429019 1027.632277131322 257.5872506468297z" fill="rgba(28, 83, 142, 0.4)" class="triangle-float3"></path><path d="M1389.406946392098 180.55901485826712L1319.246025056149 345.4108008665776 1475.0029696485155 329.04008631787855z" fill="rgba(28, 83, 142, 0.4)" class="triangle-float3"></path><path d="M548.2182890208098 251.27573866962214L625.4296289008735 148.8128299114102 522.9667201426615 71.6014900313466 445.7553802625979 174.06439878955854z" fill="rgba(28, 83, 142, 0.4)" class="triangle-float3"></path><path d="M1153.711,78.238C1178.984,78.276,1206.93,75.417,1220.119,53.858C1233.718,31.63,1226.504,3.574,1213.036,-18.734C1200.086,-40.184,1178.766,-55.965,1153.711,-56.137C1128.377,-56.311,1106.022,-41.266,1092.961,-19.557C1079.44,2.915,1073.812,31.379,1087.651,53.657C1100.939,75.048,1128.529,78.2,1153.711,78.238" fill="rgba(28, 83, 142, 0.4)" class="triangle-float3"></path><path d="M133.77248183319696-22.588521458631305L110.53027289096832 142.78838833022994 275.9071826798296 166.03059727245858 299.1493916220582 0.653687483597345z" fill="rgba(28, 83, 142, 0.4)" class="triangle-float3"></path><path d="M930.4846084526298 214.50724400587347L1004.6326290004947 306.2510602073405 1043.2608194501636 210.64293385410394z" fill="rgba(28, 83, 142, 0.4)" class="triangle-float1"></path></g><defs><mask id="SvgjsMask1490"><rect width="1440" height="560" fill="#ffffff"></rect></mask><linearGradient x1="84.72%" y1="139.29%" x2="15.28%" y2="-39.29%" gradientUnits="userSpaceOnUse" id="SvgjsLinearGradient1491"><stop stop-color="rgba(9, 155, 207, 0.89)" offset="0"></stop><stop stop-color="rgba(0, 91, 209, 1)" offset="1"></stop></linearGradient><style>
+                @keyframes float1 {
+                    0%{transform: translate(0, 0)}
+                    50%{transform: translate(-10px, 0)}
+                    100%{transform: translate(0, 0)}
+                }
+
+                .triangle-float1 {
+                    animation: float1 5s infinite;
+                }
+
+                @keyframes float2 {
+                    0%{transform: translate(0, 0)}
+                    50%{transform: translate(-5px, -5px)}
+                    100%{transform: translate(0, 0)}
+                }
+
+                .triangle-float2 {
+                    animation: float2 4s infinite;
+                }
+
+                @keyframes float3 {
+                    0%{transform: translate(0, 0)}
+                    50%{transform: translate(0, -10px)}
+                    100%{transform: translate(0, 0)}
+                }
+
+                .triangle-float3 {
+                    animation: float3 6s infinite;
+                }
+            </style></defs></svg>

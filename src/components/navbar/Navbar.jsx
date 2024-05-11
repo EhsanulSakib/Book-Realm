@@ -25,7 +25,7 @@ const Navbar = () => {
     }
 
     const links = <>
-        <ul className={`lg:flex flex-row gap-2 duration-300 top-16 md:top-[70px] absolute ${darkMode ? 'bg-gray-800' : 'bg-slate-100'} lg:static ${open ? 'left-0' : '-left-60'} p-10 lg:p-0 shadow-lg lg:shadow-none no-underline lg:gap-6 text-base lg:text-lg z-10`}>
+        <ul className={`lg:flex flex-row gap-2 duration-300 top-16 md:top-[60px] absolute ${darkMode ? 'bg-gray-800' : 'bg-slate-100'} lg:static ${open ? 'left-0' : '-left-60'} p-10 lg:p-0 shadow-lg lg:shadow-none no-underline lg:gap-6 text-base lg:text-lg z-10`}>
             <li className="pb-1 lg:pb-0"><NavLink className={'focus:border-b-2 '} to='/'>Home</NavLink></li>
             {
                 user ?
@@ -67,7 +67,7 @@ const Navbar = () => {
 
 
     return (
-        <nav className="flex items-center px-2 lg:px-4 py-2 lg:py-4 justify-between text-xl font-medium ">
+        <nav className="flex items-center px-2 lg:px-4 py-2 lg:py-4 justify-between m-auto text-xl font-medium ">
             <div className="flex items-center lg:hidden">
                 <div className="lg:hidden" onClick={() => setOpen(!open)}>
                     {
@@ -76,7 +76,7 @@ const Navbar = () => {
                 </div>
 
                 <div className="logo flex text-base lg:hidden items-center">
-                    <img src={logo} alt="" className="w-28 pl-2" />
+                    <img src={logo} alt="" className="w-24 pl-2" />
                 </div>
             </div>
 
@@ -92,16 +92,16 @@ const Navbar = () => {
                     {links}
                 </div>
 
-                <div className="flex gap-1 items-center z-10">
+                <div className="flex items-center z-10">
                     <div>
                         {
                             darkMode ?
-                                <button className="btn btn-sm  btn-ghost border-none text-white text-2xl pr-1 mt-1 shadow-none" onClick={() => setDarkMode(!darkMode)}>
+                                <button className="btn btn-sm lg:btn-md btn-circle btn-ghost border-none text-white text-xl lg:text-3xl shadow-none" onClick={() => setDarkMode(!darkMode)}>
                                     <MdLightMode />
                                 </button>
 
                                 :
-                                <button className="btn btn-sm  btn-ghost border-none text-gray-800 text-2xl shadow-none pr-1 mt-1" onClick={() => setDarkMode(!darkMode)}>
+                                <button className="btn btn-sm lg:btn-md btn-circle btn-ghost border-none text-gray-800 text-xl lg:text-3xl shadow-none" onClick={() => setDarkMode(!darkMode)}>
                                     <MdDarkMode />
                                 </button>
 
@@ -111,9 +111,9 @@ const Navbar = () => {
                         {
                             user ?
                                 <div className="flex items-center gap-2">
-                                    <div className={`flex gap-2 items-center ml-2 ${darkMode ? 'bg-gray-600' : 'bg-slate-300'} py-1 pl-2 lg:px-2 rounded-full`}>
-                                        <h2 className="font-bold text-base 2xl:text-lg">{user.displayName}</h2>
-                                        <img src={user.photoURL} alt="" className="w-12 h-12 object-cover object-top rounded-full " />
+                                    <div className={`flex gap-2 items-center ${darkMode ? 'bg-gray-600' : 'bg-slate-300'} py-1 pl-2 lg:px-2 rounded-full`}>
+                                        <h2 className="font-bold text-xs lg:text-base 2xl:text-lg">{user.displayName}</h2>
+                                        <img src={user.photoURL} alt="" className="w-8 lg:w-12 h-8 lg:h-12 object-cover object-top rounded-full " />
                                         <div>
                                             <button className={`btn btn-active  hidden btn-circle text-2xl font-extrabold lg:flex ${darkMode ? 'bg-gray-300 text-black' : 'bg-slate-700 text-white'}`} onClick={handleSignOut}><MdOutlineLogout /></button>
                                         </div>

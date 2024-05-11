@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
+import Banner from "../../components/banner/Banner";
 
 const Home = () => {
     // const loadedSubCategories = useLoaderData()
@@ -14,6 +15,7 @@ const Home = () => {
 
     return (
         <div>
+            <Banner></Banner>
         </div>
     );
 };
