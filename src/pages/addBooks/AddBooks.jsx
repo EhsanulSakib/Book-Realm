@@ -2,11 +2,13 @@ import Swal from 'sweetalert2'
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../provider/AuthProvider';
 import { BASE_URL } from '../../constVariables/constVariable';
+import { useNavigate } from 'react-router-dom';
 
 const AddBooks = () => {
     const { darkMode, user } = useContext(AuthContext)
     const [quantity, setQuantity] = useState(0)
     const [rating, setRating] = useState('')
+    const navigate = useNavigate()
 
     const handleAddBooks = event => {
         event.preventDefault();
@@ -40,6 +42,8 @@ const AddBooks = () => {
                         text: 'Book Added Successfully!',
                         icon: 'success',
                         confirmButtonText: 'Ok'
+                    }).then(() => {
+                        navigate('/all-books')
                     })
                 }
             })
@@ -58,9 +62,9 @@ const AddBooks = () => {
                     <h2 className="mb-2 font-bold text-lg">Category Name:</h2>
                     <select required className={`input rounded-none input-bordered ${darkMode ? ' bg-gray-800' : ' bg-slate-100'} w-full cursor-pointer`} name="category">
                         <option value="">Select a Category </option>
-                        <option value="Novel"> Novel</option>
-                        <option value="Thriller">Thriller</option>
-                        <option value="History">History</option>
+                        <option value="Novel"> Fiction</option>
+                        <option value="Thriller">Romance</option>
+                        <option value="History">Fantasy</option>
                         <option value="Drama">Drama</option>
                         <option value="Sci-Fi">Sci-Fi</option>
                     </select>
