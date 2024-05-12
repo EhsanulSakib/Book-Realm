@@ -29,7 +29,7 @@ const Navbar = () => {
             <li className="pb-1 lg:pb-0"><NavLink className={'focus:border-b-2 '} to='/'>Home</NavLink></li>
             {
                 user ?
-                    <li className="pb-1 lg:pb-0"><NavLink className={'focus:border-b-2'} to='/all-book'>All Books</NavLink></li>
+                    <li className="pb-1 lg:pb-0"><NavLink className={'focus:border-b-2'} to='/all-books'>All Books</NavLink></li>
                     :
                     ""
             }
