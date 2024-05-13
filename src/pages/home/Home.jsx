@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import Banner from "../../components/banner/Banner";
+import HomeBooks from "../../components/homeBooks/HomeBooks";
 
 const Home = () => {
     // const loadedSubCategories = useLoaderData()
@@ -16,6 +17,7 @@ const Home = () => {
     return (
         <div className="min-h-screen">
             <Banner></Banner>
+            <HomeBooks></HomeBooks>
         </div>
     );
 };
