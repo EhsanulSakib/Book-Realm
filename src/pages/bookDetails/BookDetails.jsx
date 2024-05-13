@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet-async";
 import ReactStars from "react-rating-stars-component";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { BASE_URL } from "../../constVariables/constVariable";
 
@@ -12,6 +12,7 @@ import { BASE_URL } from "../../constVariables/constVariable";
 const BookDetails = () => {
     const book = useLoaderData()
     const { user, darkMode } = useContext(AuthContext)
+    const [error, setError] = useState('')
 
     const { _id, bookName, category, bookQuantity, rating, author, aboutBook, photo, description } = book
 
@@ -26,15 +27,16 @@ const BookDetails = () => {
 
     const handleBorrow = event => {
         event.preventDefault();
+        setError('')
 
         const form = event.target
 
         const userName = form.userName.value
         const userEmail = form.userEmail.value
-        const bookName = form.bookName.value
+        const bookId = _id
         const returnDate = form.returnDate.value
 
-        const borrowBook = { userName, userEmail, bookName, returnDate }
+        const borrowBook = { bookId, userName, userEmail, returnDate }
         console.log(borrowBook)
         fetch(`${BASE_URL}/borrow`, {
             method: 'POST',
@@ -47,7 +49,14 @@ const BookDetails = () => {
             .then(data => {
                 const modal = document.getElementById('my_modal_1');
                 modal.close();
-                console.log(data)
+                if (data.message) {
+                    Swal.fire({
+                        title: 'Error!',
+                        text: data.message,
+                        icon: 'error',
+                        confirmButtonText: 'Ok',
+                    })
+                }
                 if (data.insertedId) {
                     Swal.fire({
                         title: 'Success!',
@@ -114,8 +123,6 @@ const BookDetails = () => {
                 <div className={`modal-box ${darkMode ? 'bg-gray-800 text-slate-100' : 'bg-slate-100 text-gray-800'}`}>
                     <h3 className="font-bold text-lg text-center">Borrow this Book? </h3>
                     <form onSubmit={handleBorrow} >
-                        <h2 className="mb-2 font-bold text-lg">Book Name:</h2>
-                        <input required type="text" placeholder="Enter BookName" defaultValue={bookName} className={` mb-4 input rounded-none input-bordered w-full bg-inherit`} name="bookName" />
                         <h2 className="mb-2 font-bold text-lg">User Name:</h2>
                         <input required type="text" placeholder="Enter User Name" defaultValue={user.displayName} className={` mb-4 input rounded-none input-bordered w-full bg-inherit`} name="userName" />
 
