@@ -124,7 +124,7 @@ const BookDetails = () => {
 
                         <h2 className="mb-2 font-bold text-lg">Return Date:</h2>
 
-                        <input type="date" name="returnDate" className="mb-36 w-full bg-transparent" />
+                        <input required type="date" name="returnDate" className="mb-36 w-full bg-transparent" />
 
 
                         <input type="submit" value="Borrow" className="btn text-lg btn-info font-bold text-white col-span-2 py-2 w-full" />

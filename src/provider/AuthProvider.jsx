@@ -3,6 +3,7 @@ import app from "../firebase/firebase.config";
 import { createContext, useEffect, useState } from "react";
 import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 import { BASE_URL } from "../constVariables/constVariable";
+import axios from "axios";
 
 export const AuthContext = createContext(null)
 const auth = getAuth(app)
@@ -40,13 +41,30 @@ const AuthProvider = ({ children }) => {
     }
 
     useEffect(() => {
-        const unSubscribe = onAuthStateChanged(auth, currentUser => {
-            console.log("user in the auth state changed", currentUser);
-            setUser(currentUser)
-            setLoading(false)
+        const unsubscribe = onAuthStateChanged(auth, currentUser => {
+            const userEmail = currentUser?.email || user?.email
+            console.log('userEmail', { userEmail })
+            const loggedUser = { email: userEmail }
+            setUser(currentUser);
+            console.log('current user', currentUser);
+            setLoading(false);
+
+            // If user exist issue a token
+            if (currentUser) {
+                axios.post('http://localhost:5000/jwt', loggedUser, { withCredentials: true })
+                    .then(res => {
+                        console.log('token', res.data)
+                    })
+            }
+            else {
+                axios.post('http://localhost:5000/logout', loggedUser, { withCredentials: true })
+                    .then(res => {
+                        console.log(res.data)
+                    })
+            }
         });
         return () => {
-            unSubscribe();
+            return unsubscribe();
         }
     }, [])
 
