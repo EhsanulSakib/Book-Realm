@@ -22,14 +22,14 @@ const Banner = () => {
                     autoplay={{ delay: 2000 }}
                 >
                     <SwiperSlide>
-                        <div style={{ backgroundImage: `url("https://i.ibb.co/VDKzNK6/2147657372.jpg")` }} className='flex items-center justify-center z-1 w-full h-60 md:h-96 lg:h-[500px] xl:h-[650px] 2xl:h-[750px] bg-cover bg-bottom relative'>
+                        <div style={{ backgroundImage: `url("https://i.ibb.co/VDKzNK6/2147657372.jpg")` }} className='flex items-center justify-center z-1 w-full h-60 md:h-96 lg:h-[500px] xl:h-[650px] 2xl:h-[1000px] bg-cover bg-bottom relative'>
                             <div className='absolute w-full h-full bg-black opacity-50'>
                             </div>
                         </div>
                     </SwiperSlide>
 
                     <SwiperSlide>
-                        <div style={{ backgroundImage: `url("https://i.ibb.co/8gkkbpB/2147864066.jpg")` }} className='flex items-center justify-center z-1 w-full h-60 md:h-96 lg:h-[500px] xl:h-[650px] 2xl:h-[750px] bg-cover bg-bottom relative'>
+                        <div style={{ backgroundImage: `url("https://i.ibb.co/8gkkbpB/2147864066.jpg")` }} className='flex items-center justify-center z-1 w-full h-60 md:h-96 lg:h-[500px] xl:h-[650px] 2xl:h-[1000px] bg-cover bg-center relative'>
                             <div className='absolute w-full h-full bg-black opacity-50'>
                             </div>
                         </div>
@@ -37,7 +37,7 @@ const Banner = () => {
 
 
                     <SwiperSlide>
-                        <div style={{ backgroundImage: `url("https://i.ibb.co/NV8RxKZ/2148448033.jpg")` }} className='flex items-center justify-center z-1 w-full h-60 md:h-96 lg:h-[500px] xl:h-[650px] 2xl:h-[750px] bg-cover bg-center relative'>
+                        <div style={{ backgroundImage: `url("https://i.ibb.co/NV8RxKZ/2148448033.jpg")` }} className='flex items-center justify-center z-1 w-full h-60 md:h-96 lg:h-[500px] xl:h-[650px] 2xl:h-[1000px] bg-cover bg-center relative'>
                             <div className='absolute w-full h-full bg-black opacity-50'>
                             </div>
 
@@ -46,7 +46,7 @@ const Banner = () => {
 
 
                     <SwiperSlide>
-                        <div style={{ backgroundImage: `url("https://i.ibb.co/VQGWcbv/2149396684.jpg")` }} className='flex items-center justify-center z-1 w-full h-60 md:h-96 lg:h-[500px] xl:h-[650px] 2xl:h-[750px] bg-cover bg-center relative'>
+                        <div style={{ backgroundImage: `url("https://i.ibb.co/VQGWcbv/2149396684.jpg")` }} className='flex items-center justify-center z-1 w-full h-60 md:h-96 lg:h-[500px] xl:h-[650px] 2xl:h-[1000px] bg-cover bg-center relative'>
                             <div className='absolute w-full h-full bg-black opacity-50'>
                             </div>
 
@@ -54,7 +54,7 @@ const Banner = () => {
                     </SwiperSlide>
 
                     <SwiperSlide>
-                        <div style={{ backgroundImage: `url("https://i.ibb.co/K0vscd5/24650.jpg")` }} className='flex items-center justify-center z-1 w-full h-60 md:h-96 lg:h-[500px] xl:h-[650px] 2xl:h-[750px] bg-cover bg-top relative'>
+                        <div style={{ backgroundImage: `url("https://i.ibb.co/K0vscd5/24650.jpg")` }} className='flex items-center justify-center z-1 w-full h-60 md:h-96 lg:h-[500px] xl:h-[650px] 2xl:h-[1000px] bg-cover bg-center relative'>
                             <div className='absolute w-full h-full bg-black opacity-50'>
                             </div>
 

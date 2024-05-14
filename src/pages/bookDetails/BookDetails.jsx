@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet-async";
 import ReactStars from "react-rating-stars-component";
@@ -13,9 +13,11 @@ const BookDetails = () => {
     const book = useLoaderData()
     const { user, darkMode } = useContext(AuthContext)
     const [error, setError] = useState('')
+    const navigate = useNavigate()
 
     const { _id, bookName, category, bookQuantity, rating, author, aboutBook, photo, description } = book
-
+    let date = new Date()
+    let currentDate = date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate()
     const handleBorrow = event => {
         event.preventDefault();
         setError('')
@@ -25,9 +27,10 @@ const BookDetails = () => {
         const userName = form.userName.value
         const userEmail = form.userEmail.value
         const bookId = _id
+        const borrowDate = currentDate
         const returnDate = form.returnDate.value
 
-        const borrowBook = { bookId, userName, userEmail, returnDate }
+        const borrowBook = { bookId, userName, userEmail, borrowDate, returnDate }
         console.log(borrowBook)
         fetch(`${BASE_URL}/borrow`, {
             method: 'POST',
@@ -54,6 +57,8 @@ const BookDetails = () => {
                         text: 'Book Added Successfully!',
                         icon: 'success',
                         confirmButtonText: 'Ok',
+                    }).then(() => {
+                        navigate('/all-books')
                     })
                 }
             })
