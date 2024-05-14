@@ -9,6 +9,7 @@ import PrivateRouter from "./PrivateRouter";
 import AllBooks from "../pages/allBooks/AllBooks";
 import { BASE_URL } from "../constVariables/constVariable";
 import BookDetails from "../pages/bookDetails/BookDetails";
+import BorrowBooks from "../pages/borrowBooks/BorrowBooks";
 
 const router = createBrowserRouter([
     {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
                 path: '/all-books/:id',
                 element: <PrivateRouter><BookDetails></BookDetails></PrivateRouter>,
                 loader: ({ params }) => fetch(`${BASE_URL}/books/${params.id}`)
+            },
+            {
+                path: '/borrowed',
+                element: <PrivateRouter><BorrowBooks></BorrowBooks></PrivateRouter>
             },
             {
                 path: '/login',

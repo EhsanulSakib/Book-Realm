@@ -16,15 +16,6 @@ const BookDetails = () => {
 
     const { _id, bookName, category, bookQuantity, rating, author, aboutBook, photo, description } = book
 
-    // const handleBorrow = () => {
-    //     Swal.fire({
-    //         title: 'Contact',
-    //         text: `For order this product send mail at ${userEmail}`,
-    //         icon: 'info',
-    //         confirmButtonText: 'Ok'
-    //     })
-    // }
-
     const handleBorrow = event => {
         event.preventDefault();
         setError('')
@@ -63,9 +54,6 @@ const BookDetails = () => {
                         text: 'Book Added Successfully!',
                         icon: 'success',
                         confirmButtonText: 'Ok',
-                        customClass: {
-                            container: 'z-50'
-                        }
                     })
                 }
             })
@@ -110,7 +98,7 @@ const BookDetails = () => {
                         <h2 className="text-xl lg:text-2xl mb-4 font-bold">Book Remaining: {bookQuantity}</h2>
                         {
                             bookQuantity == 0 ?
-                                <button disabled className={`btn border-none text-white bg-gray-500 text-lg w-full md:w-44`}>Borrow</button>
+                                <button disabled className={`btn border-none disabled:text-black text-lg w-full md:w-44`}>Borrow</button>
                                 :
                                 <button onClick={() => document.getElementById('my_modal_1').showModal()} className={`btn border-none text-white bg-blue-400 hover:bg-blue-500 text-lg w-full md:w-44`}>Borrow</button>
                         }
