@@ -3,6 +3,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import Banner from "../../components/banner/Banner";
 import HomeBooks from "../../components/homeBooks/HomeBooks";
+import FAQ from "../../components/faq/FAQ";
 
 const Home = () => {
     // const loadedSubCategories = useLoaderData()
@@ -18,6 +19,7 @@ const Home = () => {
         <div className="min-h-screen">
             <Banner></Banner>
             <HomeBooks></HomeBooks>
+            <FAQ></FAQ>
         </div>
     );
 };

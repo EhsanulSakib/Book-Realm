@@ -51,13 +51,13 @@ const AuthProvider = ({ children }) => {
 
             // If user exist issue a token
             if (currentUser) {
-                axios.post('http://localhost:5000/jwt', loggedUser, { withCredentials: true })
+                axios.post(`${BASE_URL}/jwt`, loggedUser, { withCredentials: true })
                     .then(res => {
                         console.log('token', res.data)
                     })
             }
             else {
-                axios.post('http://localhost:5000/logout', loggedUser, { withCredentials: true })
+                axios.post(`${BASE_URL}/logout`, loggedUser, { withCredentials: true })
                     .then(res => {
                         console.log(res.data)
                     })
