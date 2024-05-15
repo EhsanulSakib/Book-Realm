@@ -4,6 +4,7 @@ import { AuthContext } from "../../provider/AuthProvider";
 import Banner from "../../components/banner/Banner";
 import HomeBooks from "../../components/homeBooks/HomeBooks";
 import FAQ from "../../components/faq/FAQ";
+import Team from "../../components/team/Team";
 
 const Home = () => {
     // const loadedSubCategories = useLoaderData()
@@ -19,6 +20,7 @@ const Home = () => {
         <div className="min-h-screen">
             <Banner></Banner>
             <HomeBooks></HomeBooks>
+            <Team></Team>
             <FAQ></FAQ>
         </div>
     );
