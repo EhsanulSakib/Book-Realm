@@ -10,6 +10,10 @@ const Book = ({ book }) => {
         navigate(`/all-books/${id}`)
     }
 
+    const handleUpdate = id => {
+        navigate(`/update/${id}`)
+    }
+
 
     return (
         <div className="card border border-gray-700 shadow-sm image-full">
@@ -32,7 +36,11 @@ const Book = ({ book }) => {
                         edit={false}
                         isHalf={false}
                     /></h2>
-                    <button onClick={() => handleDetails(_id)} className="btn bg-[#e2e2e2e7] text-lg font-bold text-black border-none hover:bg-[#e2e2e2] hover:transition-all"><h2 className="flex items-center text-base lg:text-xl 2xl:text-2xl font-bold">Details <FaCaretRight /></h2></button>
+                    <div className="flex md:flex-col lg:flex-row gap-2">
+                        <button onClick={() => handleDetails(_id)} className="btn bg-[#e2e2e2e7] text-lg font-bold text-black border-none hover:bg-[#e2e2e2] hover:transition-all"><h2 className="flex items-center text-base lg:text-xl 2xl:text-2xl font-bold">Details <FaCaretRight /></h2></button>
+
+                        <button onClick={() => handleUpdate(_id)} className="btn bg-[#e2e2e2e7] text-lg font-bold text-black border-none hover:bg-[#e2e2e2] hover:transition-all"><h2 className="flex items-center text-base lg:text-xl 2xl:text-2xl font-bold">Update <FaCaretRight /></h2></button>
+                    </div>
                 </div>
             </div>
         </div>

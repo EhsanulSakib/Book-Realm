@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import ReactStars from "react-rating-stars-component";
 import { FaCaretRight } from "react-icons/fa6";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const HomeBook = ({ book }) => {
     const { _id, bookName, author, category, bookQuantity, rating, photo } = book
@@ -12,7 +14,8 @@ const HomeBook = ({ book }) => {
 
 
     return (
-        <div className="card border border-gray-700 shadow-sm image-full">
+        <div data-aos="fade-up"
+            data-aos-duration="1000" className="card border border-gray-700 shadow-sm image-full">
             <figure><img src={photo} alt="book" className="rounded-lg object-cover object-center" /></figure>
 
             <div className="card-body gap-2 lg:gap-4 pl-3 justify-end">

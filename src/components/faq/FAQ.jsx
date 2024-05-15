@@ -1,9 +1,13 @@
 import React from 'react';
 import Lottie from "lottie-react";
 import faq from "../../../public/faq.json";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const FAQ = () => {
     return (
-        <div className='flex flex-col md:flex-row items-center gap-4 mb-4 md:mb-8 lg:mb-12 h-[1150px] md:h-[650px] lg:h-[550px]'>
+        <div data-aos="fade-up"
+            data-aos-duration="1000" className='flex flex-col md:flex-row items-center gap-4 mb-4 md:mb-8 lg:mb-12 h-[1150px] md:h-[650px] lg:h-[550px]'>
             <div className='w-full md:w-2/5'>
                 <Lottie animationData={faq} className="h-[32rem]" />
             </div>
